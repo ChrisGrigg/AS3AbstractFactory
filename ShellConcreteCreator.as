@@ -8,13 +8,6 @@ package
 	 */
 	public class ShellConcreteCreator extends ShellAbsractCreator
 	{
-		/** @private */
-		private var _callBack:Function;
-		/** @private */
-		private var _zOrderIntervalID:uint;
-		/** @private */
-		private var _dataModel:MultiDataModel;
-
 		/**
 		 * Invokes a method in the chosen shell class.
 		 * Establishes if the app is running in dev or RC mode.
@@ -48,10 +41,9 @@ package
 		/**
 		 * Constructor.
 		 */
-		public function ShellConcreteCreator(dataModel:MultiDataModel)
+		public function ShellConcreteCreator()
 		{
 			super();
-			this._dataModel = dataModel;
 		}
 
 		// choose a class depending on the shell software to be utilised
@@ -64,7 +56,7 @@ package
 				this._commands = new ZincCommands(this._dataModel);
 				return this._commands;
 			} else {
-				throw new ThrowableError(103, ErrorType.WARNING);
+				throw new Error("Variable is empty or not available");
 				return null;
 			}
 		}
@@ -89,7 +81,7 @@ package
 		 */
 		override public function deployableFolder(subFolder:String=''):String
 		{
-			return this._commands.deployableFolder(subFolder, forceSWFStudioCommand);
+			return this._commands.deployableFolder(subFolder);
 		}
 
 		/**
