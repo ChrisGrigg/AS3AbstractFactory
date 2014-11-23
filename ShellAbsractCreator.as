@@ -97,7 +97,7 @@ package
 		 * @return the string method in the chosen shell class
 		 * @return null
 		 */
-		public function deployableFolder(subFolder:String='', forceSWFStudioCommand:Boolean=false):String
+		public function deployableFolder(subFolder:String=''):String
 		{
 			_err = new Error(ERROR_ABSTRACT);
             		trace(_err.toString());    // Error
