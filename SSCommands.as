@@ -17,8 +17,6 @@ package
 		/** @private */
 		private const BASE_LOCAL:String = "local";
 		/** @private */
-		private var _configInfo:ConfigInfo;
-		/** @private */
 		private var _deployablePath:String;
 		/** 
 		 * @private 
@@ -37,7 +35,7 @@ package
 		
 		/**
 		 * Not applicable for SWF Studio
-		 * @return Boolean
+		 * @return false
 		 */
 		public function get zincMode():Boolean
 		{
