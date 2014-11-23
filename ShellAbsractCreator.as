@@ -73,7 +73,7 @@ package
 		protected function createShellSoftware(cKind:uint):IShellCommands 
 		{
 			_err = new Error(ERROR_ABSTRACT);
-            trace(_err.toString());    // Error
+        		trace(_err.toString());    // Error
 			return null;
 		}
 		
@@ -86,7 +86,7 @@ package
 		public function specialFolder(subFolder:String):String
 		{
 			_err = new Error(ERROR_ABSTRACT);
-            trace(_err.toString());    // Error
+            		trace(_err.toString());    // Error
 			return null;
 		}
 		
@@ -100,7 +100,7 @@ package
 		public function deployableFolder(subFolder:String='', forceSWFStudioCommand:Boolean=false):String
 		{
 			_err = new Error(ERROR_ABSTRACT);
-            trace(_err.toString());    // Error
+            		trace(_err.toString());    // Error
 			return null;
 		}
 		
